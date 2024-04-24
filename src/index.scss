@@ -13,6 +13,12 @@ html, body {
   font-family: var(--Outfit);
 }
 
+.scene-background {
+  background-image: url(./images/map_scene1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 * {
   font-family: var(--Outfit);
 }
@@ -20,4 +26,8 @@ html, body {
 .brandTitle {
   width: 35vh;
   image-rendering: pixelated;
+}
+
+.footer {
+  font-family: var(--Outfit);
 }

@@ -5,7 +5,7 @@ import {
   Outlet,
   RouterProvider
 } from "react-router-dom"
-import { Grid, createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+import { Grid, createTheme, ThemeProvider, CssBaseline, Container, Box } from '@mui/material';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -14,14 +14,15 @@ import Privacy from "./routes/Privacy"
 
 import theme from './constants/theme';
 import './index.scss';
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 
 function Root() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid container>
+      <Grid2 container textAlign={"center"} m={0} p={0}>
         <Outlet />
-      </Grid>
+      </Grid2>
     </ThemeProvider>
   )
 }

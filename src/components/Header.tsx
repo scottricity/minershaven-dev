@@ -1,5 +1,5 @@
 import brandTitle from "../images/logo.png"
-import { Container, Paper, Box, AppBar, Grid, Menu, Typography, List, ListItem, Divider, Toolbar } from "@mui/material"
+import { Container, Paper, Box, AppBar, Grid, Menu, Typography, List, ListItem, Divider, Toolbar, styled } from "@mui/material"
 
 type C_HeaderProps = {
     float?: boolean;
@@ -32,8 +32,9 @@ function Header(props: KVProps & C_HeaderProps) {
                 position="relative"
                 elevation={1}
                 sx={{
-                    backgroundColor: "rgba(0, 0, 0, 0%)",
-                    alignItems: "center"
+                    alignItems: "center",
+                    borderBottomLeftRadius: "5px",
+                    borderBottomRightRadius: "5px"
                 }}>
                 <Box sx={{
                     backgroundColor: "rgba(0, 0, 0, 0%)",
