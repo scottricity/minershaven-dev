@@ -46,7 +46,9 @@
     "sass": "^1.75.0",
     "styled-components": "^6.1.8",
     "typescript": "^3.2.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@floating-ui/react": "^0.26.12",
+    "@floating-ui/react-dom": "^2.0.8"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",

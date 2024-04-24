@@ -1,3 +1,7 @@
-interface KVProps {
-    [key: string]: any
+type KVComponentProps = {
+    children?: React.ReactNode
+}
+
+type KVProps = KVComponentProps&{
+    [key: string]: any;
 }

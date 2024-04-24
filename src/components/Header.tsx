@@ -1,20 +1,52 @@
 import brandTitle from "../images/logo.png"
-import { Container, Paper, Box, AppBar, Grid, Menu } from "@mui/material"
+import { Container, Paper, Box, AppBar, Grid, Menu, Typography, List, ListItem, Divider, Toolbar } from "@mui/material"
 
-function Header(props: KVProps) {
+type C_HeaderProps = {
+    float?: boolean;
+}
+
+function Header(props: KVProps & C_HeaderProps) {
+
+    let leftItems = []
+    let rightItems = []
+
+    if (props.children) {
+        let children: React.ReactNode[] = Array.of(props.children)
+        if (Array.isArray(children[0])) {
+            children[0].forEach((node, index, list) => {
+                let equation = (index) % 2
+                if (equation === 0) {
+                    leftItems.push(node)
+                } else {
+                    rightItems.push(node)
+                }
+            })
+        } else {
+            rightItems.push(children)
+        }
+    }
 
     return (
-        <Container sx={{ p: props.float ? 5 : 0, position: "absolute"}}>
+        <div>
             <AppBar
-                position={props.float ? "fixed" : "static"}
-                style={{ textAlign: "center", maxWidth: props.float ? "90%" : "100%" }}
-                elevation={0}
-                sx={{ backgroundColor: "transparent", marginRight: props.float ? "50%" : 0, transform: props.float ? "translate(50%, 10%)" : 0 }}>
-                <Paper sx={{ backgroundColor: "rgba(17,17,17, 75%)" }}>
+                position="relative"
+                elevation={1}
+                sx={{
+                    backgroundColor: "rgba(0, 0, 0, 0%)",
+                    alignItems: "center"
+                }}>
+                <Box sx={{
+                    backgroundColor: "rgba(0, 0, 0, 0%)",
+                    textAlign: "center",
+                    display: "flex",
+                    alignItems: "center",
+                }}>
+                    {leftItems.map(e => e)}
                     <a href="/"><img alt="Logo" className="brandTitle" src={brandTitle} /></a>
-                </Paper>
+                    {rightItems.map(e => e)}
+                </Box>
             </AppBar>
-        </Container>
+        </div>
     )
 }
 

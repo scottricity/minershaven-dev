@@ -3,101 +3,21 @@
   src: url(./fonts/blocky.ttf);
 }
 
+
+$Outfit: 'Outfit Variable', 'Arial', sans-serif;
 $darkBackground: #333;
 
 html, body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Outfit Variable', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
   height: 100%;
-}
-
-.root {
   width: 100%;
-  height: 100%;
-  min-height: 95vh;
+  font-family: var(--Outfit);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.navbar {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: white;
-}
-
-.navbar h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span {
-  margin: 0;
-}
-
-a {
-  --color: #49b6ff;
-  color: #49b6ff;
-}
-
-a.footer-link {
-  color: rgb(from var(--color) 100 100 100);
-  opacity: 0.7;
-  text-decoration: none;
-}
-
-a.footer-link:hover {
-  opacity: 0.4;
-}
-
-a:has(> .brandTitle) {
-  line-height: 0;
+* {
+  font-family: var(--Outfit);
 }
 
 .brandTitle {
+  width: 35vh;
   image-rendering: pixelated;
-  width: 350px;
-}
-
-.checkersBox {
-  --trans: 100%;
-  background-color: rgba(10, 10, 10, var(--trans));
-}
-
-.checkersBox:nth-child(even) {
-  background-color: rgba(10, 10, 10, calc(var(--trans) - 50%));
-}
-
-.centered {
-  text-align: center;
-}
-
-.inline-cover {
-  --startPad: 100px;
-  padding-top: var(--startPad);
-  text-align: center;
-}
-
-.inline-cover:not(:first-child):nth-child(1n + 1) {
-  --startPad: 50px;
-  padding-top: var(--startPad);
-}
-
-hr.style-eight {
-  --hrSize: 50%;
-  border: #282c34;
-  border-radius: 15px;
-  border-width: 2px;
-  border-style: solid;
-  max-width: var(--hrSize);
 }
