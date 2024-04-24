@@ -1,12 +1,15 @@
 import brandTitle from "../images/logo.png"
-import { Container, Grid, List, ListItem, Typography } from "@mui/material"
+import { Container, Grid, Link, List, ListItem, Typography } from "@mui/material"
 
 function Footer() {
     return (
-        <Container component={"footer"} sx={{p: 1}}>
-            <Grid container flexWrap="wrap" gap={0} flexDirection={"column"}>
+        <Container
+            component={"footer"}>
+            <Grid container>
                 <Grid item>
-                    <a href="/privacy" className="footer-link">Privacy Policy</a>
+                    <Typography>
+                        <a href="/privacy" className="footer-link">Privacy Policy</a>
+                    </Typography>
                 </Grid>
             </Grid>
         </Container>

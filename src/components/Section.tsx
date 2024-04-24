@@ -9,8 +9,11 @@ function ImageSection(props: KVProps) {
         className="inline-cover"
             style={{
                 backgroundRepeat: "no-repeat",
-                backgroundImage: `url(../images/${props.image ? props.image : 'map_scene1.jpg'})`,
-                height: "calc(10vmax + 100%)",
+                backgroundImage: props.image ? `url(./images/${props.image})` : "none",
+                backgroundSize: "100%, 100%",
+                backgroundColor: "var(--darkBackground)",
+                height: "100%",
+                width: "100%"
             }}>
             {children}
         </div>

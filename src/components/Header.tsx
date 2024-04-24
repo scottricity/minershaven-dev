@@ -4,7 +4,7 @@ import { Container, Paper, Box, AppBar, Grid, Menu } from "@mui/material"
 function Header(props: KVProps) {
 
     return (
-        <Container sx={{ p: props.float ? 5 : 0 }}>
+        <Container sx={{ p: props.float ? 5 : 0, position: "absolute"}}>
             <AppBar
                 position={props.float ? "fixed" : "static"}
                 style={{ textAlign: "center", maxWidth: props.float ? "90%" : "100%" }}
